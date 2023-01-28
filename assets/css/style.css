@@ -130,6 +130,7 @@ a {
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-direction: normal;
+  display: none;
 }
 
 #header .modal-container .menu-container {
