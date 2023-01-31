@@ -1,0 +1,84 @@
+#chart {
+  margin-top: 100px;
+  padding: 80px 0;
+}
+
+#chart .chart-description h4 {
+  color: #2e4d0f;
+  font-family: var(--title-font);
+  font-size: 35px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+
+#chart .chart-description p {
+  text-align: left;
+  color: #4d4c4c;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: 0.1px;
+  margin-bottom: 40px;
+  width: 70%;
+}
+
+#chart .chart-description .button {
+  font-size: 25px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border-radius: 20px 20px 20px 20px;
+  color: #fff;
+  padding: 10px 20px;
+  transition: all ease 0.2s;
+}
+
+#chart .chart-description .button:hover {
+  background-color: var(--third-color);
+}
+
+#chart .chart-container .chart-column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#chart .chart-container .col:last-of-type .chart-column-container {
+  opacity: 0.7;
+}
+
+#chart .chart-container .chart-column-container .chart-column-background {
+  width: 20px;
+  height: 300px;
+  background-color: #ecf5ff;
+  border-radius: 10px;
+  position: relative;
+}
+
+#chart .chart-container .chart-column-container .chart-column-percent {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
+}
+
+#chart .chart-container .chart-column-container .chart-column-number {
+  position: absolute;
+  top: 50%;
+  right: -150%;
+  transform: translate(50%, -50%);
+}
+
+#chart .chart-container .chart-column-container .chart-column-name {
+  margin-bottom: 0;
+  margin-top: 15px;
+  font-weight: 600;
+}

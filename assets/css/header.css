@@ -1,0 +1,184 @@
+/* START HEADER */
+
+#header {
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 0px 13px -3px rgb(0 0 0 / 50%);
+  z-index: 10;
+  background-color: #fff;
+}
+
+#header .container {
+  height: 100%;
+  position: relative;
+}
+
+#header .logo {
+  display: block;
+  position: absolute;
+  top: 40%;
+}
+
+#header .logo .logo-img {
+  width: 390px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px -10px rgb(0 0 0 / 50%);
+}
+
+#header .logo .logo-img img {
+  width: 100%;
+}
+
+#header .menu-button {
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#header .menu-button:hover {
+  animation: pulse ease 0.5s infinite alternate;
+  background-color: var(--secondary-color);
+}
+
+#header .menu-button i {
+  color: #fff;
+  font-size: 22px;
+}
+
+#header .modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.8);
+  z-index: 20;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  display: none;
+}
+
+#header .modal-container .menu-container {
+  width: 450px;
+  height: 100%;
+  background-image: url("https://www.tierversicherung-tarifcheck.de/wp-content/uploads/2021/05/menu-background.png");
+  background-position: -3px -107px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 120px 50px 0px 50px;
+  padding-top: 100px;
+  position: absolute;
+  right: -1%;
+  animation-name: slideIn;
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  animation-direction: normal;
+  border-radius: 200px 0px 0px 0px;
+}
+
+#header .modal-container .menu-container .menu-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+#header .modal-container .menu-container .menu-button i {
+  font-size: 30px;
+}
+
+#header .modal-container .menu-container .menu-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+}
+
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content-img {
+  width: 100%;
+}
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content-img
+  img {
+  width: 100%;
+}
+
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content
+  h4 {
+  color: #ffffff;
+  font-family: "Montserrat Alternates", Sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content
+  ul {
+  list-style: none;
+  padding: 0;
+}
+
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content
+  ul
+  li {
+  margin-bottom: 5px;
+  transition: all ease 0.2s;
+}
+
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content
+  ul
+  li:hover {
+  transform: translateX(3%);
+}
+
+#header
+  .modal-container
+  .menu-container
+  .menu-content-container
+  .menu-content
+  ul
+  li
+  a {
+  color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* END HEADER */

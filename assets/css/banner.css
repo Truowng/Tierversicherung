@@ -1,0 +1,42 @@
+#banner {
+  background-image: url("https://www.tierversicherung-tarifcheck.de/wp-content/uploads/2021/04/AdobeStock_211295843-scaled.jpeg ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 55px 0px 75px 0px;
+  margin-top: var(--header-height);
+  height: 590px;
+}
+
+#banner .container,
+#banner .container .row {
+  height: 100%;
+}
+
+#banner .banner-content h4,
+#banner .banner-content p,
+#banner .banner-content p span {
+  text-align: left;
+  font-family: var(--title-font);
+  font-style: normal;
+  line-height: 52px;
+  letter-spacing: 0.4px;
+  width: fit-content;
+}
+
+#banner .banner-content h4 {
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+#banner .banner-content p {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 500;
+}
+#banner .banner-content p span {
+  color: #2e4d0f;
+  font-size: 40px;
+  font-weight: bold;
+}

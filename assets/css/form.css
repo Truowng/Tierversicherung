@@ -1,0 +1,803 @@
+#form {
+  transform: translateY(-130px);
+}
+
+#form .container {
+  position: relative;
+}
+
+#form .form-animal-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+#form .form-animal-selection-container h4 {
+  font-family: var(--title-font);
+  padding: 010px 25px 10px 25px;
+  background-color: #ffffffde;
+  width: fit-content;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #2e4d0f;
+  font-size: 29px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 52px;
+  letter-spacing: 0.4px;
+}
+
+#form .form-animal-selection {
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 11px -1px rgb(0 0 0 / 92%);
+  width: 420px;
+}
+
+#form .form-animal-selection .form-animal-selection-item {
+  flex: 1;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+#form .form-animal-selection .form-animal-selection-item:hover,
+#form .form-animal-selection .form-animal-selection-item.active {
+  background-color: var(--third-color);
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%) inset;
+}
+
+#form .form-animal-selection .form-animal-selection-item img {
+  width: 100%;
+}
+
+#form .form-animal-selection-img {
+  position: absolute;
+  width: 200px;
+  right: 17%;
+}
+
+#form .form-animal-selection-img img {
+  width: 100%;
+}
+
+#form .form-animal-container {
+  display: none;
+}
+
+#form .form-animal-container.active {
+  display: block;
+  animation: fadeIn ease 1s;
+}
+
+#form .form-animal-container > h4 {
+  color: #424344;
+  font-family: var(--title-font);
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 32px;
+  margin-top: 10px;
+}
+
+#form .form-animal-container .row {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#form .form-animal-container p {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#form .form-animal-container p i {
+  margin-right: 10px;
+}
+
+#form .form-animal-table-container {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+#form .form-animal-table-container .row {
+  align-items: unset;
+}
+
+#form
+  .form-animal-table-container
+  .form-animal-table-progress
+  .form-animal-table-progress-bar {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 15px;
+  position: relative;
+}
+
+#form
+  .form-animal-table-container
+  .form-animal-table-progress
+  .form-animal-table-progress-bar
+  .form-animal-table-progress-bar-current {
+  background-color: var(--third-color);
+  width: 0%;
+  height: 15px;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
+}
+
+#form .form-animal-table-container .form-animal-table-progress p {
+  color: #000;
+  margin-top: 10px;
+}
+
+#form .form-animal-table-content {
+  display: none;
+  animation: fadeIn ease 0.75s;
+}
+
+#form .form-animal-table-content h4 {
+  color: #424344;
+  font-family: var(--title-font);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 32px;
+  margin-top: 10px;
+}
+
+#form .form-animal-table-content.active {
+  display: block;
+}
+
+#form .form-animal-table-content p {
+  color: #000;
+  text-align: left;
+  text-transform: unset;
+}
+
+#form .form-animal-table-content .row {
+  background-color: transparent;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input {
+  position: relative;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input:last-child {
+  margin-bottom: 50px;
+}
+
+#form
+  .form-animal-table-content:last-child
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input:last-child {
+  margin-bottom: 20px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  ul {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 15px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  ul
+  li
+  i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  ul
+  li
+  .fa-circle-xmark {
+  color: #ff0000;
+}
+
+#form .form-animal-table-content .form-animal-table-content-input p {
+  font-family: var(--title-font);
+  text-transform: unset;
+  color: #000;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .description {
+  font-style: italic;
+  color: #757574;
+  font-size: 14px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  p
+  span {
+  color: var(--primary-color);
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  input {
+  padding: 0 9px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgb(196 196 196 / 30%), 0 0 0 0 transparent;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  height: 60px;
+  width: 60%;
+  transition: all 0.2s ease-in-out;
+  font-family: var(--title-font);
+  color: #757575;
+  font-size: 20px;
+}
+
+#form
+  .form-animal-table-content:last-child
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  input {
+  width: 100%;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  input:focus {
+  border: 1px solid var(--third-color);
+  outline: none;
+  box-shadow: 0 0 10px rgb(132, 179, 83, 50%);
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-dropdown {
+  width: 60%;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid var(--third-color);
+  border-top: none;
+  box-shadow: 0 0 10px rgb(132, 179, 83, 50%);
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  z-index: 5;
+  display: none;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input.active
+  .form-animal-table-content-dropdown {
+  display: block;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input:nth-child(3)
+  .form-animal-table-content-dropdown {
+  top: -146%;
+  border-bottom: none;
+  border-top: 1px solid var(--third-color);
+  border-radius: 5px 5px 0 0;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-dropdown
+  input {
+  width: 100%;
+  height: 50px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-dropdown
+  ul {
+  overflow-y: scroll;
+  max-height: 150px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-dropdown
+  ul
+  li {
+  padding: 10px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-dropdown
+  ul
+  li:hover {
+  background-color: var(--third-color);
+  color: #fff;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .line {
+  margin: 40px 0;
+  height: 2px;
+  width: 60%;
+  background-color: #ddd;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-input-container
+  .form-animal-table-content-drag {
+  margin-bottom: 50px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-drag
+  p {
+  font-family: var(--title-font);
+  text-transform: unset;
+  color: #000;
+  text-align: left;
+}
+
+#form .form-animal-table-content-dragbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+#form .form-animal-table-content-dragbar-container .dragbar {
+  -webkit-appearance: none;
+  width: 52%;
+  height: 2px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-drag
+  .form-animal-table-content-dragbar-container
+  .dragbar-number {
+  padding: 0 9px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgb(196 196 196 / 30%), 0 0 0 0 transparent;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  height: 60px;
+  width: 60px;
+  transition: all 0.2s ease-in-out;
+  font-family: var(--title-font);
+  color: #757575;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-drag
+  .form-animal-table-content-dragbar-container
+  .dragbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-drag
+  .form-animal-table-content-dragbar-container
+  .dragbar::-webkit-slider-thumb:hover {
+  background: var(--third-color);
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-drag
+  .description {
+  color: #bbb;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  input {
+  display: none;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label
+  a {
+  color: var(--primary-color);
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label
+  a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30px;
+  border: 2px solid #ccc;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-all-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-part-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-basic-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-premium-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-premium-plus-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-inkl-package {
+  animation: fadeIn ease 0.75s;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-part-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-premium-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-premium-plus-package,
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .insurance-inkl-package {
+  display: none;
+}
+
+#form
+  .form-animal-table-content
+  .col-12
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid #ccc;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input-container
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+#form
+  .form-animal-table-content
+  .col-12
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  input[type="radio"]:checked
+  ~ label::after {
+  opacity: 1;
+}
+
+#form
+  .form-animal-table-content
+  .form-animal-table-content-input
+  .form-animal-table-content-checkbox
+  input[type="checkbox"]:checked
+  ~ label::after {
+  opacity: 1;
+}
+
+#form .form-animal-table-content-tag-container {
+  background-color: rgba(124, 177, 65, 0.2);
+  padding: 20px;
+}
+
+#form .form-animal-table-content-tag-container h4 {
+  margin-bottom: 30px;
+  padding-left: 0;
+  color: #080808;
+}
+
+#form .form-animal-table-content-tag-information-detail-container {
+  border-top: 2px solid #fff;
+  padding-top: 30px;
+  margin-bottom: 80px;
+}
+
+#form .form-animal-table-content-tag-information-detail-container h5 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #080808;
+}
+
+#form .form-animal-table-content-tag-information-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+#form .form-animal-table-content-tag-information-detail p {
+  font-size: 14px;
+  text-transform: unset;
+  font-family: var(--title-font);
+}
+
+#form .form-animal-table-content-tag-information-detail .section {
+  color: #080808;
+}
+
+#form .form-animal-table-content-tag-information-detail .unit {
+  color: #757575;
+}
+
+#form .form-animal-table-content-tag-price-container p {
+  color: #080808;
+  text-transform: unset;
+  width: fit-content;
+  text-align: left;
+}
+
+#form .form-animal-table-content-tag-price {
+  padding: 10px 40px;
+  background-color: #6a8c47;
+  transform: translateX(28%);
+  position: relative;
+  margin-top: 20px;
+}
+#form .form-animal-table-content-tag-price::before,
+#form .form-animal-table-content-tag-price::after {
+  content: "";
+  position: absolute;
+}
+#form .form-animal-table-content-tag-price::before {
+  left: -20.5%;
+  top: 0;
+  border-top: 26px solid transparent;
+  border-left: 26px solid transparent;
+  border-right: 26px solid #6a8c47;
+  border-bottom: 26px solid transparent;
+}
+#form .form-animal-table-content-tag-price::after {
+  right: 0;
+  bottom: -35%;
+  border-top: 9px solid var(--primary-color);
+  border-left: 9px solid var(--primary-color);
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+}
+
+#form .form-animal-table-content-tag-price p {
+  color: #fff;
+  font-size: 21px;
+}
+
+#form .form-animal-table-content-tag-price-container .next-button,
+#form .form-animal-table-content-input .back-button,
+#form .submit-button {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form .form-animal-table-content-input .back-button {
+  justify-content: start;
+}
+
+#form .form-animal-table-content-tag-price-container .next-button span,
+#form .form-animal-table-content-input .back-button span {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--title-font);
+  background-color: #fff;
+  text-transform: uppercase;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+#form .form-animal-table-content-input .back-button span {
+  border: 2px solid #d9d9d5;
+}
+
+#form .form-animal-table-content-tag-price-container .next-button span:hover {
+  background-color: rgba(106, 140, 71, 0.2);
+}
+
+#form .form-animal-table-content-input .back-button span:hover {
+  background-color: rgba(238, 238, 238, 0.5);
+}
+
+#form .submit-button span {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--title-font);
+  background-color: var(--third-color);
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+#form .submit-button span:hover {
+  background-color: var(--primary-color);
+}
