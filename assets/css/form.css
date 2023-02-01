@@ -386,10 +386,7 @@
   background-color: #ddd;
 }
 
-#form
-  .form-animal-table-content
-  .form-animal-table-input-container
-  .form-animal-table-content-drag {
+#form .form-animal-table-content-drag {
   margin-bottom: 50px;
 }
 
@@ -713,7 +710,7 @@
 }
 
 #form .form-animal-table-content-tag-price {
-  padding: 10px 40px;
+  padding: 10px 10px;
   background-color: #6a8c47;
   transform: translateX(28%);
   position: relative;

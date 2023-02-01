@@ -1,0 +1,498 @@
+/* pC low resolution  */
+
+@media (max-width: 1400px) {
+  /* START FORM */
+  #form .form-animal-selection-img {
+    right: 12%;
+  }
+
+  #form .form-animal-table-content-tag-price {
+    transform: translateX(34%);
+  }
+  #form .form-animal-table-content-tag-price::before {
+    left: -24.5%;
+  }
+  /* END FORM */
+
+  /* START CHART */
+  #chart .chart-container .chart-column-container .chart-column-name,
+  #chart .chart-container .chart-column-container .chart-column-number {
+    font-size: 13px;
+  }
+
+  #chart .chart-container .chart-column-container .chart-column-background {
+    width: 17px;
+  }
+  /* END CHART */
+}
+
+@media (max-width: 1200px) {
+  /* START FORM */
+  #form .form-animal-selection-img {
+    display: none;
+  }
+
+  #form .form-animal-container p {
+    font-size: 14px;
+  }
+
+  #form .form-animal-table-content-tag-price p {
+    font-size: 16px;
+  }
+  #form .form-animal-table-content-tag-price::before {
+    left: -24%;
+    border-top: 22px solid transparent;
+    border-left: 22px solid transparent;
+    border-right: 22px solid #6a8c47;
+    border-bottom: 22px solid transparent;
+  }
+
+  #form .form-animal-table-content-tag-price::after {
+    bottom: -39%;
+  }
+
+  #form .form-animal-table-content-tag-container {
+    padding: 10px;
+  }
+
+  #form .form-animal-table-content h4 {
+    font-size: 16px;
+  }
+
+  #form .form-animal-table-content-tag-information-detail-container h5 {
+    font-size: 14px;
+  }
+
+  #form .form-animal-table-content-tag-information-detail p {
+    font-size: 12px;
+  }
+
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input-container
+    .form-animal-table-content-input
+    input {
+    font-size: 16px;
+  }
+
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input
+    .form-animal-table-content-checkbox
+    label,
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input-container
+    .form-animal-table-content-input
+    ul
+    li,
+  #form .submit-button span,
+  #form .form-animal-table-content .form-animal-table-content-input p,
+  #form .form-animal-table-content-tag-price-container .next-button span,
+  #form .form-animal-table-content-input .back-button span {
+    font-size: 14px;
+  }
+
+  /* END FORM */
+
+  /* START INTRODUCE */
+  #introduce h4 {
+    font-size: 30px;
+  }
+
+  #introduce .container > p {
+    font-size: 16px;
+  }
+
+  #introduce .introduce-img .description {
+    font-size: 12px;
+  }
+
+  #introduce .introduce-img .number {
+    font-size: 46px;
+    line-height: 48px;
+  }
+  /* END INTRODUCE */
+
+  /* START PRICE */
+  #price .title h4,
+  #price .price-animal-page-container .badge-container .title span,
+  #price .price-animal-page-container .badge-container .title {
+    font-size: 30px;
+  }
+
+  .badge-container {
+    margin-top: 20px;
+  }
+
+  #price .price-animal-page-container .badge-container .badge {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  #price .price-animal-package-container .price-animal-package h5,
+  #price .price-animal-package-container .price-animal-package .price,
+  #price .button {
+    font-size: 20px;
+  }
+
+  #price .price-animal-package-container .price-animal-package .price span {
+    font-size: 38px;
+  }
+
+  #price .price-animal-package-container .price-animal-package p,
+  #price .price-animal-package-container .price-animal-package-list li {
+    font-size: 12px;
+  }
+
+  #price .price-animal-package-container .price-animal-package-list {
+    padding: 10px;
+  }
+
+  /* END PRICE */
+
+  /* START DOCTOR */
+  #doctor .title h4 {
+    font-size: 30px;
+  }
+
+  #doctor .doctor-information .name {
+    font-size: 18px;
+  }
+
+  #doctor .doctor-information .description {
+    font-size: 12px;
+  }
+
+  #doctor .title::before {
+    width: 150px;
+  }
+  /* END DOCTOR */
+
+  /* START CHART */
+  #chart .chart-description h4 {
+    font-size: 25px;
+  }
+
+  #chart .chart-description p {
+    font-size: 14px;
+  }
+
+  #chart .chart-description .button {
+    font-size: 20px;
+  }
+
+  #chart .chart-container .chart-column-container .chart-column-name,
+  #chart .chart-container .chart-column-container .chart-column-number {
+    font-size: 10px;
+  }
+
+  #chart .chart-container .chart-column-container .chart-column-background {
+    width: 15px;
+  }
+
+  /* END CHART */
+
+  /* START FOOTER */
+  #footer .introduce-container p,
+  #footer .link-container ul li a,
+  #footer .information-container h4,
+  #footer .information-container a,
+  #footer .information-container strong,
+  #footer .information-container p {
+    font-size: 13px;
+  }
+
+  #footer .information-container h4,
+  #footer .link-container h4,
+  #footer .information-container .phone {
+    font-size: 17px;
+  }
+
+  #footer .information-container .button-container a {
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+
+  #footer .copyrights p {
+    font-size: 11px;
+  }
+  /* END FOOTER */
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  /* START HEADER */
+  #header .logo {
+    position: unset;
+  }
+
+  #header .logo .logo-img {
+    box-shadow: unset;
+    border-radius: unset;
+  }
+  /* END HEADER */
+
+  /* START FORM */
+  #form .form-animal-container > h4 {
+    font-size: 23px;
+  }
+  #form .form-animal-container p {
+    text-align: left;
+  }
+  #form .form-animal-table-container .form-animal-table-progress p {
+    text-align: center;
+  }
+
+  #form .form-animal-table-content h4 {
+    font-size: 14px;
+  }
+
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input-container
+    .form-animal-table-content-input
+    input,
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input-container
+    .form-animal-table-content-input
+    .line {
+    width: 100%;
+  }
+
+  #form .form-animal-table-content-tag-price {
+    width: fit-content;
+    margin-left: auto;
+    transform: translateX(43%);
+  }
+
+  #form .form-animal-table-content-tag-price::before {
+    left: -30.5%;
+    border-top: 22px solid transparent;
+    border-left: 22px solid transparent;
+    border-right: 22px solid #6a8c47;
+    border-bottom: 22px solid transparent;
+  }
+
+  #form .form-animal-table-content h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #form .form-animal-table-content-tag-information-detail-container h5 {
+    font-size: 16px;
+  }
+
+  #form .form-animal-table-content-tag-information-detail p {
+    font-size: 14px;
+  }
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input
+    .form-animal-table-content-checkbox
+    label,
+  #form
+    .form-animal-table-content
+    .form-animal-table-content-input-container
+    .form-animal-table-content-input
+    ul
+    li,
+  #form .submit-button span,
+  #form .form-animal-table-content .form-animal-table-content-input p,
+  #form .form-animal-table-content-tag-price-container .next-button span,
+  #form .form-animal-table-content-input .back-button span,
+  #form .form-animal-table-content-tag-price-container p {
+    font-size: 16px;
+  }
+
+  /* END FORM */
+
+  /* START CLIENT */
+  #client .client-img {
+    display: flex;
+    height: 100%;
+    padding: 5px;
+  }
+  /* END CLIENT */
+
+  /* START PRICE */
+  #price .price-animal-package-container .price-animal-package h5,
+  #price .price-animal-package-container .price-animal-package .price,
+  #price .button {
+    font-size: 22px;
+  }
+
+  #price .price-animal-package-container .price-animal-package .price span {
+    font-size: 45px;
+  }
+
+  #price .price-animal-package-container .price-animal-package p,
+  #price .price-animal-package-container .price-animal-package-list li {
+    font-size: 16px;
+  }
+
+  #price .price-animal-package-container .price-animal-package-list {
+    padding: 10px 10px 10px 30px;
+  }
+  /* END PRICE */
+
+  /* START DOCTOR */
+  #doctor .doctor-img {
+    padding: 20px 20px 0;
+  }
+
+  #doctor .doctor-container {
+    margin-bottom: 30px;
+  }
+  /* START DOCTOR */
+
+  /* START CHART */
+  #chart .chart-container {
+    display: none;
+  }
+
+  #chart .chart-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #chart .chart-description h4 {
+    text-align: center;
+  }
+  /* END CHART */
+
+  /* START FOOTER */
+  #footer .information-container {
+    margin-bottom: 40px;
+  }
+  /* END FOOTER */
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  /* START HEADER  */
+  #header .modal-container .menu-container {
+    width: 101%;
+  }
+  #header .logo {
+    width: 50%;
+  }
+
+  #header .logo .logo-img {
+    width: 100%;
+  }
+  /* END HEADER  */
+  /* START BANNER */
+  #banner .banner-content h4 {
+    font-size: 35px;
+    margin: 0 auto;
+  }
+
+  #banner .banner-content p {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #banner .banner-content p span {
+    font-size: 30px;
+  }
+  /* END BANNER */
+
+  /* START FORM */
+  #form {
+    transform: translateY(-150px);
+  }
+
+  #form .form-animal-selection-container h4 {
+    font-size: 20px;
+  }
+  #form .form-animal-container {
+    padding: 20px;
+  }
+
+  #form .form-animal-container > h4 {
+    font-size: 20px;
+    padding-left: 0;
+  }
+
+  #form .form-animal-table-content h4 {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  #form .form-animal-selection {
+    width: 350px;
+  }
+  /* END FORM */
+}
+
+@media (max-width: 429px) {
+  /* START BANNER */
+
+  #form .form-animal-selection-container h4 {
+    font-size: 16px;
+  }
+
+  #banner .banner-content h4,
+  #banner .banner-content p,
+  #banner .banner-content p span {
+    font-size: 25px;
+  }
+  /* END BANNER */
+
+  /* START FORM */
+  #form .form-animal-selection-container {
+    margin-bottom: 20px;
+  }
+  #form .form-animal-selection {
+    width: 280px;
+  }
+  /* END FORM */
+
+  /* START INTRODUCE */
+  #introduce h4 {
+    font-size: 25px;
+  }
+
+  #introduce .introduce-img .number {
+    font-size: 35px;
+  }
+
+  #introduce .introduce-img .description {
+    font-size: 10px;
+  }
+  /* END INTRODUCE */
+
+  /* START PRICE */
+  #price .title h4,
+  #price .price-animal-page-container .badge-container .title span,
+  #price .price-animal-page-container .badge-container .title {
+    font-size: 25px;
+  }
+  #price .title p {
+    font-size: 14px;
+  }
+  /* END PRICE */
+
+  /* START DOCTOR */
+  #doctor .title h4 {
+    font-size: 25px;
+  }
+  /* END DOCTOR */
+
+  /* START CHART */
+  #chart {
+    margin-top: 0;
+  }
+  #chart .chart-description h4 {
+    font-size: 25px;
+  }
+
+  #chart .chart-description p {
+    width: 90%;
+  }
+  /* END CHART */
+}

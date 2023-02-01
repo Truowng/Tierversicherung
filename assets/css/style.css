@@ -8,6 +8,7 @@
 @import url("./doctor.css");
 @import url("./chart.css");
 @import url("./footer.css");
+@import url("./responsive.css");
 
 :root {
   --header-height: 80px;
