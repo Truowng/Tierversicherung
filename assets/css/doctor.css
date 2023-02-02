@@ -88,6 +88,7 @@
   height: 100%;
   opacity: 0;
   transition: all ease 0.4s;
+  border-radius: 50%;
 }
 
 #doctor .doctor-img:hover .doctor-button {

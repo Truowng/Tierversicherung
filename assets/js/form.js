@@ -14,6 +14,9 @@ const addActive = (element, isDataPage = false, dataPage = null) =>
 
 export function dropDown() {
   const tableInputs = $$(".form-animal-table-content-input");
+  const dropDownInputs = $$(".form-animal-table-content-dropdown input");
+  const dropDownList = $$(".form-animal-table-content-dropdown ul li");
+
   tableInputs.forEach((tableInput) => {
     tableInput.querySelector("input").addEventListener("focusin", () => {
       $(".form-animal-table-content-input.active")
@@ -24,13 +27,13 @@ export function dropDown() {
 
     tableInput.querySelector("input").addEventListener("focusout", () => {
       setTimeout(() => {
-        const dropDownInputs = $$(".form-animal-table-content-dropdown input");
         let count = 0;
         dropDownInputs.forEach((dropDownInput) => {
           if (dropDownInput === document.activeElement) {
             count--;
           } else {
             count++;
+
             if (count == dropDownInputs.length) {
               $(".form-animal-table-content-input.active") &&
                 removeActive("form-animal-table-content-input");
@@ -45,6 +48,45 @@ export function dropDown() {
       }, 10);
     });
   });
+  dropDownList.forEach((dropDownItem) => {
+    dropDownItem.addEventListener("mousedown", () => {
+      $(".form-animal-table-content-input.active input").value =
+        dropDownItem.innerHTML;
+      calculator("dog", 1);
+    });
+  });
+}
+
+export function calculator(animal, initValue) {
+  console.log(animal);
+  const dataPage = $(
+    `[class="form-animal-container active"][data-animal="${animal}"]`
+  )
+    ? $(`[class="form-animal-container active"][data-animal="${animal}"]`)
+    : "";
+  // console.log(dataPriceValue);
+  if (animal == "dog") {
+    if ($(".form-animal-table-content-input.active input").value == "1 Jahr") {
+      let dataPriceValue =
+        dataPage != ""
+          ? dataPage.querySelector(
+              ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+            ).innerHTML * 1
+          : "";
+      let output = dataPriceValue + 0.4;
+      dataPage.querySelector(
+        ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+      ).innerHTML = Math.round(output * 100) / 100;
+      console.log(output);
+    } else {
+    }
+  } else if (animal == "dog") {
+    // value = initValue;
+    // console.log("dog", value);
+  } else {
+    // value = initValue;
+    // console.log("horse", value);
+  }
 }
 
 export function changePage() {

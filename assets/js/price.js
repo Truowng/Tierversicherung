@@ -9,7 +9,6 @@ export function changePriceSection() {
       if (priceSection.getAttribute("data-animal") == "dog") {
         $(".price-animal-selection-item.active").classList.remove("active");
         priceSection.classList.add("active");
-        // console.log($(".price-animal-page-container.active").classList);
         $(".price-animal-page-container.active").classList.remove("active");
         $(
           '[class="price-animal-page-container"][data-animal="dog"]'
@@ -18,7 +17,6 @@ export function changePriceSection() {
       if (priceSection.getAttribute("data-animal") == "cat") {
         $(".price-animal-selection-item.active").classList.remove("active");
         priceSection.classList.add("active");
-        // console.log($(".price-animal-page-container.active").classList);
         $(".price-animal-page-container.active").classList.remove("active");
         $(
           '[class="price-animal-page-container"][data-animal="cat"]'
@@ -27,7 +25,6 @@ export function changePriceSection() {
       if (priceSection.getAttribute("data-animal") == "horse") {
         $(".price-animal-selection-item.active").classList.remove("active");
         priceSection.classList.add("active");
-        // console.log($(".price-animal-page-container.active").classList);
         $(".price-animal-page-container.active").classList.remove("active");
         $(
           '[class="price-animal-page-container"][data-animal="horse"]'
