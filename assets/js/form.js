@@ -52,41 +52,143 @@ export function dropDown() {
     dropDownItem.addEventListener("mousedown", () => {
       $(".form-animal-table-content-input.active input").value =
         dropDownItem.innerHTML;
-      calculator("dog", 1);
+      switch (
+        $(".form-animal-selection-item.active").getAttribute("data-animal")
+      ) {
+        case "dog":
+          calculator("dog", 7.6);
+          break;
+        case "cat":
+          calculator("cat", 4.56);
+          break;
+        case "horse":
+          calculator("horse", 11);
+          break;
+      }
     });
   });
 }
 
 export function calculator(animal, initValue) {
-  console.log(animal);
   const dataPage = $(
     `[class="form-animal-container active"][data-animal="${animal}"]`
   )
     ? $(`[class="form-animal-container active"][data-animal="${animal}"]`)
     : "";
-  // console.log(dataPriceValue);
-  if (animal == "dog") {
-    if ($(".form-animal-table-content-input.active input").value == "1 Jahr") {
-      let dataPriceValue =
-        dataPage != ""
-          ? dataPage.querySelector(
-              ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
-            ).innerHTML * 1
-          : "";
-      let output = dataPriceValue + 0.4;
-      dataPage.querySelector(
-        ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
-      ).innerHTML = Math.round(output * 100) / 100;
-      console.log(output);
-    } else {
-    }
-  } else if (animal == "dog") {
-    // value = initValue;
-    // console.log("dog", value);
-  } else {
-    // value = initValue;
-    // console.log("horse", value);
+
+  const radios = $$(
+    "#form .form-animal-table-content .form-animal-table-content-input .form-animal-table-content-checkbox label"
+  );
+  const dataPriceValue =
+    dataPage != ""
+      ? dataPage.querySelector(
+          ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+        ).innerHTML
+      : "";
+
+  const incrementInput = 0.6;
+  const incrementCheckbox = 1.5;
+
+  if (
+    $(".form-animal-table-content-input.active input").value == "1 Jahr" ||
+    $(".form-animal-table-content-input.active input").value == "2 Jahre"
+  ) {
+    let output = Math.round((initValue + incrementInput * 1) * 100) / 100;
+    dataPage.querySelector(
+      ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+    ).innerHTML = output;
+  } else if (
+    $(".form-animal-table-content-input.active input").value == "3 Jahre" ||
+    $(".form-animal-table-content-input.active input").value == "4 Jahre"
+  ) {
+    let output = Math.round((initValue + incrementInput * 2) * 100) / 100;
+    dataPage.querySelector(
+      ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+    ).innerHTML = output;
+  } else if (
+    $(".form-animal-table-content-input.active input").value == "5 Jahre" ||
+    $(".form-animal-table-content-input.active input").value == "6 Jahre"
+  ) {
+    let output = Math.round((initValue + incrementInput * 3) * 100) / 100;
+    dataPage.querySelector(
+      ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+    ).innerHTML = output;
+  } else if (
+    $(".form-animal-table-content-input.active input").value == "7 Jahre" ||
+    $(".form-animal-table-content-input.active input").value == "8 Jahre"
+  ) {
+    let output = Math.round((initValue + incrementInput * 4) * 100) / 100;
+    dataPage.querySelector(
+      ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+    ).innerHTML = output;
+  } else if (
+    $(".form-animal-table-content-input.active input").value == "9 Jahre" ||
+    $(".form-animal-table-content-input.active input").value == "10+ Jahre"
+  ) {
+    let output = Math.round((initValue + incrementInput * 5) * 100) / 100;
+    dataPage.querySelector(
+      ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+    ).innerHTML = output;
   }
+
+  radios.forEach((radio) => {
+    radio.addEventListener("click", () => {
+      switch (radio.getAttribute("for")) {
+        case "yes-dog-1":
+          dataPage.querySelector(
+            ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+          ).innerHTML =
+            Math.round(
+              (dataPage.querySelector(
+                ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+              ).innerHTML *
+                1 +
+                incrementCheckbox) *
+                100
+            ) / 100;
+          break;
+        case "yes-cat-1":
+          dataPage.querySelector(
+            ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+          ).innerHTML =
+            Math.round(
+              (dataPage.querySelector(
+                ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+              ).innerHTML *
+                1 +
+                incrementCheckbox) *
+                100
+            ) / 100;
+          break;
+        case "no-dog-1":
+          dataPage.querySelector(
+            ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+          ).innerHTML =
+            Math.round(
+              (dataPage.querySelector(
+                ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+              ).innerHTML *
+                1 -
+                incrementCheckbox) *
+                100
+            ) / 100;
+          break;
+        case "no-cat-1":
+          dataPage.querySelector(
+            ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+          ).innerHTML =
+            Math.round(
+              (dataPage.querySelector(
+                ".form-animal-table-content.active .form-animal-table-content-tag-price p span"
+              ).innerHTML *
+                1 -
+                incrementCheckbox) *
+                100
+            ) / 100;
+          break;
+      }
+    });
+  });
 }
 
 export function changePage() {
